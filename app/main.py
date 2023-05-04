@@ -24,9 +24,4 @@ while user_life > 0 and "_" in array_of_answer:
   if user_choice.lower() not in selected_word.lower():
     user_life -= 1
     print(f"You have {user_life} lives left")
-
-
-
-  
-
-
+    

@@ -1,67 +1,14 @@
 import random
 
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+import hangman_logo
+import hangman_art
+import hangman_words
 
-word_list = ["aardvark", "baboon", "camel"]
+print(hangman_logo.logo)
 
 user_life = 6
 
-selected_word = random.choice(word_list)
+selected_word = random.choice(hangman_words.word_list)
 
 word_blank_spaces = len(selected_word)
 
@@ -75,7 +22,7 @@ for space in range(0, word_blank_spaces):
 while user_life > 0 and "_" in array_of_answer:
   print("-------------------")
   if user_life > 0:
-    print(stages[int(user_life)])  
+    print(hangman_art.stages[int(user_life)])  
   
   print(array_of_answer)
   user_choice = input("Guess a letter: ")
@@ -89,8 +36,8 @@ while user_life > 0 and "_" in array_of_answer:
     print(f"You have {user_life} lives left")
 
 if user_life == 0 and "_" in array_of_answer:
-  print(stages[0])
-  print("You lose")
+  print(hangman_art.stages[0])
+  print(f"You lose. The selected word was {selected_word.upper()}")
 elif "_" not in array_of_answer:
   print("You win")
 

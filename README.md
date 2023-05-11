@@ -7,7 +7,7 @@
 This project was created using Docker to studying the basic concepts of Python learned at day 07  in the **[100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/)**. 
 
 ## Summary
-**Day 07**: Learn more about While loops, If/esle statements 
+**Day 07**: Learn more about While loops, If/esle statements. 
 
 ## What user can do?
 
